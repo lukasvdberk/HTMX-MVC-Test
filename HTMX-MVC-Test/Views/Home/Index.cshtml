@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Fill out the form</h1>
+<form hx-post="/" hx-target="#result" hx-indicator="#spinner">
+    <input type="text" name="firstname" placeholder="First name" required>
+    <input type="text" name="lastname" placeholder="Last name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <button>Submit</button>
+</form>
+
+
+<div id="spinner" class="htmx-indicator">
+    <span>Loading...</span>
+</div>
+<div id="result"></div>
